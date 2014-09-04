@@ -1,0 +1,20 @@
+{% extends "base.json" %} 
+{% block content %}
+    "login-span": {
+        "username": {
+            "props": {
+                "loc": "#signin-email"
+            }
+        },
+        "password": {
+            "props": {
+                "loc": "#signin-password"
+            }
+        },
+        "login_button": {
+            "props": {
+                "loc": ".flex-table-btn"
+            }
+        }
+    },
+{% endblock %}
