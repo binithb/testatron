@@ -6,20 +6,17 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 
-class Component:
+class ComponentLoader:
     def __init__(self,json_file, section):
         templateloader = jinja2.FileSystemLoader( searchpath="./" )
-        templateenv = jinja2.Environment( loader=templateloader )
+        template_env = jinja2.Environment( loader=templateloader )
         template_file = json_file
-        template = templateenv.get_template( template_file )
+        template = template_env.get_template( template_file )
         self.page = json.loads( template.render(  ))
         self.span = self.page["elements"][section]
         self.props = {}
 
         print self.span
-
-    def parse(self):
-        pass
 
     def load(self):
         for element in self.span:
@@ -30,15 +27,21 @@ class Component:
             self.props[element] = self._get_element(self.span[element]["props"]["loc"])
         pass
     def _get_element(self,loc):
-        driver = webdriver.Firefox()
         #driver = webdriver.PhantomJS()
         driver.get("http://www.twitter.com")
         elem = driver.find_element_by_id("signin-email")
         print elem.__dict__
 
-        pass
+    def _get_locator_by_type(self, locator):
+        if ('.' == locator[0]):
+            return
+        elif('#' == locator[0])::
 
-cmp = Component("login.json","login-span")
+
+
+
+
+cmp = ComponentLoader("login.json","login-span")
 cmp.load()
 
 
