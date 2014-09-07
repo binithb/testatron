@@ -44,27 +44,10 @@ def _run(inpath=None, updatecheck=True, debug_console=False):
     if inpath:
         inpath = unicode(inpath, sys.getfilesystemencoding())
     jataayu = Jataayu(inpath, updatecheck)
-    _show_old_wxpython_warning_if_needed(jataayu.frame)
     if debug_console:
         _start_debug_console(jataayu)
     jataayu.MainLoop()
 
-def _show_old_wxpython_warning_if_needed(parent=None):
-    if wx.VERSION >= (2, 8, 12, 1):
-        return
-    title = 'Please upgrade your wxPython installation'
-    message = ('Jataayu officially supports wxPython 2.8.12.1. '
-               'Your current version is %s.\n\n'
-               'Older wxPython versions are known to miss some features used by Jataayu. '
-               'Notice also that wxPython 3.0 is not yet supported.\n\n'
-               'wxPython 2.8.12.1 packages can be found from\n'
-               'http://sourceforge.net/projects/wxpython/files/wxPython/2.8.12.1/.'
-               % wx.VERSION_STRING)
-    style = wx.ICON_EXCLAMATION
-    if not parent:
-        app = wx.PySimpleApp()
-        parent = wx.Frame(None, size=(0,0))
-    wx.MessageDialog(parent, message, title, style).ShowModal()
 
 def _print_stacks():
     id2name = dict((th.ident, th.name) for th in threading.enumerate())

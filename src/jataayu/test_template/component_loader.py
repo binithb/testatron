@@ -3,6 +3,8 @@ __author__ = 'anupama'
 import jinja2
 import simplejson as json
 
+import globals as globals
+
 
 class ComponentLoader:
     def __init__(self, json_file, section):
@@ -14,6 +16,7 @@ class ComponentLoader:
         self.span = self.page["elements"][section]
         self.props = {}
         print self.span
+        globals.init()
 
     def load(self):
         for element in self.span:
@@ -25,18 +28,23 @@ class ComponentLoader:
 
     def _get_locator_by_type(self,locator):
 
-        css_type, uniqueid = locator[0,1], locator[1]
-        if (1 == css_type.length && 0 < uniqueid.length):
-            if ('.' == css_type):
-                elem = driver.find_element_by_id("signin-email")
-            elif ('#' == css_type):
-                elem = driver.fin("signin-email")
+        print ("locator %s ") % locator
+        css_type, uniqueid = locator[0:1], locator[1:]
+        print ("css_type %s, uniqueid %s") % (css_type, uniqueid)
+        self.driver = globals.get_driver()
+        if (1 == len(css_type) and 0 < len(uniqueid)):
+            if ('#' == css_type):
+                elem = self.driver.find_element_by_id(uniqueid)
+            elif ('.' == css_type):
+                elem = self.driver.find_element_by_class_name(uniqueid)
             else:
-                print "unsupported location menthod"
+                print "unsupported location finder method"
 
         print elem.__dict__
+        return elem
 
-cmp = ComponentLoader("login.json", "login-span")
-cmp.load()
+# cmp = ComponentLoader("login.json", "login-span")
+# cmp.load()
+# print cmp.props
 
 
