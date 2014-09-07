@@ -1,7 +1,7 @@
 __author__ = 'anupama'
 __author__ = 'anupama'
 
-from src.Jataayu.component_loader import ComponentLoader
+from src.jataayu.core.component_loader import ComponentLoader
 
 class Component2:
     def __init__(self,json_file, section):
