@@ -27,5 +27,5 @@ class Login(WebComponent):
 
 
 login = Login ("login.json", "login-span")
-login.login("netsgr8_4us@yahoo.com" , "thisispassword")
+login.login("netsgr8_4us@yahoo.com" , "")
 
