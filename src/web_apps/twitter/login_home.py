@@ -14,22 +14,20 @@ __author__ = 'anupama'
 #  limitations under the License.
 
 
-from component_loader import ComponentLoader
+from src.jataayu.test_template.web_component import WebComponent
 
-class WebComponent(object):
-    def __init__(self ,json_file, section):
-        self.component_loader = ComponentLoader( json_file, section)
-        self.component_loader.load()
-        print self.component_loader.props
-        for key,element in self.component_loader.props.items():
-            print ("key %s element %s" ) % (key,element)
-            self.__dict__[key] = element
-        print(self)
-        print(self.__dict__)
+class LoginHome(WebComponent):
+    def __init__(self, json_file, section):
+        super(LoginHome, self).__init__(json_file,section)
+
+    def check_about(self, ):
+        pass
+        # print "self.username"
         # print self.username
-        # self.component_loader.driver.quit()
+        print "about"
+        print self.about
 
 
-# self.component_loader = WebComponent("login.json", "login-span")
-
+login_home = LoginHome ("login.json", "footer")
+login_home.check_about()
 

@@ -15,20 +15,20 @@ __author__ = 'anupama'
 
 
 from src.jataayu.test_template.web_component import WebComponent
-
-class Login(WebComponent):
+from login import Login
+class NewTweet(WebComponent):
     def __init__(self, json_file, section):
-        super(Login, self).__init__(json_file,section)
+        super(NewTweet, self).__init__(json_file,section)
 
-    def login(self, username,password):
-        pass
-        # print "self.username"
-        # print self.username
-        self.username.send_keys(username)
-        self.password.send_keys(password)
-        self.login_button.click()
+    def tweet(self, tweet_message):
+        self.tweet_box.send_keys(tweet_message)
+        self.component_loader.detect("tweet_button")
+        self.tweet_button.click()
+
 
 
 login = Login ("login.json", "login-span")
 login.login("netsgr8_4us@yahoo.com" , "thisispassword")
-
+new_tweet = NewTweet ("logged_in_home.json", "new_tweet")
+new_tweet.tweet("auto tweet")
+# TODO 1  # make driver common for all classes in a test, # write all classes for one .json file in one py file

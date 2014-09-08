@@ -11,9 +11,11 @@ def init():
     global  driver
     binary = FirefoxBinary('/home/anupama/Downloads/sw/firefox/firefox')
     driver = webdriver.Firefox(firefox_binary=binary)
-
     driver.get("http://www.twitter.com")
-    driver.find_element_by_id("signin-email").send_keys("123")
+    username = driver.find_element_by_id("signin-email")
+    print "username is"
+    print username
+    # username.send_keys("123")
 
 
 def get_driver():
