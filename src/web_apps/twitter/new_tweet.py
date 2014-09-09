@@ -18,11 +18,12 @@ from src.jataayu.test_template.web_component import WebComponent
 from login import Login
 class NewTweet(WebComponent):
     def __init__(self, json_file, section):
-        super(NewTweet, self).__init__(json_file,section)
+        super(NewTweet, self).__init__(json_file, section)
 
     def tweet(self, tweet_message):
         self.tweet_box.send_keys(tweet_message)
-        self.component_loader.detect("tweet_button")
+        self.component_loader.detect_element("tweet_button", make_visible=True)
+        self.objectify("tweet_button", self.component_loader.props)
         self.tweet_button.click()
 
 

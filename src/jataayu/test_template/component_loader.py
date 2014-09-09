@@ -19,22 +19,25 @@ class ComponentLoader:
         self.span = self.page["elements"][section]
         self.props = {}
         print self.span
-        globals.init()
 
     def load(self):
         for element in self.span:
-            self.props[element] = self.detect_element(element)
+            self.detect_element(element)
 
-    def detect_element(self, element):
+    def detect_element(self, element, make_visible=False):
             print element
             print self.span[element]
             props = self.span[element][self.JSON_KEY_PROPS]
             print props
-            if self.JSON_KEY_VISIBLE in props and False == props[self.JSON_KEY_VISIBLE]:
-                print "skipping invisible element"
-            else:
-                print self.span[element][self.JSON_KEY_PROPS][self.JSON_KEY_LOC]
-                return self._get_locator_by_type(self.span[element][self.JSON_KEY_PROPS][self.JSON_KEY_LOC])
+            if self.JSON_KEY_VISIBLE in props :
+                    props[self.JSON_KEY_VISIBLE] = make_visible
+                    if not props[self.JSON_KEY_VISIBLE]:
+                        print "skipping invisible element"
+                        return None
+
+            print self.span[element][self.JSON_KEY_PROPS][self.JSON_KEY_LOC]
+            self.props[element] = self._get_locator_by_type(self.span[element][self.JSON_KEY_PROPS][self.JSON_KEY_LOC])
+            return self.props[element]
 
 
     def _get_locator_by_type(self, locator):
@@ -49,6 +52,8 @@ class ComponentLoader:
             elif '.' == css_type and ' ' not in uniqueid:
                 elem = self.driver.find_element_by_class_name(uniqueid)
             elif '.' == css_type and ' ' in uniqueid:
+                elem = self.driver.find_element_by_css_selector(css_type+uniqueid)
+            elif ' ' in uniqueid:
                 elem = self.driver.find_element_by_css_selector(css_type+uniqueid)
             else:
                 print "unsupported location finder method"

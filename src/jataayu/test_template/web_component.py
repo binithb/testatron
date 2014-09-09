@@ -21,13 +21,17 @@ class WebComponent(object):
         self.component_loader = ComponentLoader( json_file, section)
         self.component_loader.load()
         print self.component_loader.props
-        for key,element in self.component_loader.props.items():
+        for key, element in self.component_loader.props.items():
             print ("key %s element %s" ) % (key,element)
-            self.__dict__[key] = element
+            # self.__dict__[key] = element
+            self.objectify(key, self.component_loader.props)
         print(self)
         print(self.__dict__)
         # print self.username
         # self.component_loader.driver.quit()
+
+    def objectify(self, key, dict):
+        self.__dict__[key] = dict [key]
 
 
 # self.component_loader = WebComponent("login.json", "login-span")

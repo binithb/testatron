@@ -36,4 +36,4 @@ def get_open_windows():
     print "open_windows end-----------------2"
     # driver = webdriver.PhantomJS()
 
-# init()
+init()

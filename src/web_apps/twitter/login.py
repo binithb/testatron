@@ -20,7 +20,7 @@ class Login(WebComponent):
     def __init__(self, json_file, section):
         super(Login, self).__init__(json_file,section)
 
-    def login(self, username,password):
+    def login(self, username, password):
         pass
         # print "self.username"
         # print self.username
@@ -29,6 +29,6 @@ class Login(WebComponent):
         self.login_button.click()
 
 
-login = Login ("login.json", "login-span")
-login.login("netsgr8_4us@yahoo.com" , "thisispassword")
+# login = Login ("login.json", "login-span")
+# login.login("netsgr8_4us@yahoo.com" , "thisispassword")
 

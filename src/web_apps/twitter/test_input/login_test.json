@@ -1,0 +1,19 @@
+{
+    "common_data": {
+        "url": {
+
+            }
+        },
+    "testcases": {
+        "login_basic": {
+            "username": "netsgr8_4us@yahoo.com",
+            "password": "thisispassword"
+        },
+
+        "login_wrong_password": {
+            "username": "netsgr8_4us@yahoo.com",
+            "password": "thisisnotpassword"
+        },
+    }
+}
+
