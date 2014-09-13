@@ -28,6 +28,6 @@ class LoginHome(WebComponent):
         print self.about
 
 
-login_home = LoginHome ("login.json", "footer")
+login_home = LoginHome ("Login.json", "footer")
 login_home.check_about()
 

@@ -1,4 +1,3 @@
-__author__ = 'anupama'
 # Copyright 2014 Anupama Kattiparambil Prakasan
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,10 +14,13 @@ __author__ = 'anupama'
 
 
 from src.jataayu.test_template.web_component import WebComponent
-from login import Login
+from src.web_apps.twitter.components.login import Login
+
+__author__ = 'anupama'
+
 class NewTweet(WebComponent):
-    def __init__(self, json_file, section):
-        super(NewTweet, self).__init__(json_file, section)
+    def __init__(self, section):
+        super(NewTweet, self).__init__(self.__class__+".json", section)
 
     def tweet(self, tweet_message):
         self.tweet_box.send_keys(tweet_message)
@@ -28,7 +30,7 @@ class NewTweet(WebComponent):
 
 
 
-login = Login ("login.json", "login-span")
+login = Login ("Login.json", "login-span")
 login.login("netsgr8_4us@yahoo.com" , "thisispassword")
 new_tweet = NewTweet ("logged_in_home.json", "new_tweet")
 new_tweet.tweet("auto tweet")

@@ -34,6 +34,6 @@ class WebComponent(object):
         self.__dict__[key] = dict [key]
 
 
-# self.component_loader = WebComponent("login.json", "login-span")
+# self.component_loader = WebComponent("Login.json", "login-span")
 
 

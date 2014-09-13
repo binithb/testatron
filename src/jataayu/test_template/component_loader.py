@@ -2,7 +2,6 @@ __author__ = 'anupama'
 
 import jinja2
 import simplejson as json
-
 import globals as globals
 
 
@@ -10,13 +9,14 @@ class ComponentLoader:
     JSON_KEY_VISIBLE = "visible"
     JSON_KEY_PROPS = "props"
     JSON_KEY_LOC = "loc"
+    JSON_KEY_ELEMENTS = "elements"
     def __init__(self, json_file, section):
-        templateloader = jinja2.FileSystemLoader(searchpath="./")
-        template_env = jinja2.Environment(loader=templateloader)
+        template_loader = jinja2.FileSystemLoader(searchpath="./")
+        template_env = jinja2.Environment(loader=template_loader)
         template_file = json_file
         template = template_env.get_template(template_file)
         self.page = json.loads(template.render())
-        self.span = self.page["elements"][section]
+        self.span = self.page[self.JSON_KEY_ELEMENTS][section]
         self.props = {}
         print self.span
 
@@ -63,7 +63,7 @@ class ComponentLoader:
             print elem.__dict__
         return elem
 
-# cmp = ComponentLoader("login.json", "login-span")
+# cmp = ComponentLoader("Login.json", "login-span")
 # cmp.load()
 # print cmp.props
 

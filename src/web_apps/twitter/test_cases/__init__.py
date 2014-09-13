@@ -13,21 +13,3 @@ __author__ = 'anupama'
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
 
-
-"""
-
-Examples
---------
-
-"""
-
-from .builder import TestSuiteBuilder
-from .context import EXECUTION_CONTEXTS
-from .keywords import Keyword
-from .model import TestSuite, TestCase
-from .testlibraries import TestLibrary
-from .runkwregister import RUN_KW_REGISTER
-
-
-
-
