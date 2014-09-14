@@ -1,3 +1,5 @@
+import os
+
 __author__ = 'anupama'
 # Copyright 2014 Anupama Kattiparambil Prakasan
 #
@@ -15,14 +17,22 @@ __author__ = 'anupama'
 
 
 from component_loader import ComponentLoader
+import project_suite_globals as project_suite_globals
 
 class WebComponent(object):
-    def __init__(self ,json_file, section):
-        self.component_loader = ComponentLoader( json_file, section)
+    def __init__(self, class_name, section):
+        print "class_name : %s " % class_name
+        web_component_json_file = str(class_name)[str(class_name).rfind('.')+1:-2] + ".json"
+        print "web_component_json_file %s " % web_component_json_file
+        print "cwd :%s " % os.getcwd()
+        print "project_suite_globals.web_app :%s " % project_suite_globals.web_app
+        web_component_json_path = os.path.join(os.getcwd(), "src", "web_apps", project_suite_globals.web_app, "components")
+
+        self.component_loader = ComponentLoader(web_component_json_path, web_component_json_file, section)
         self.component_loader.load()
         print self.component_loader.props
         for key, element in self.component_loader.props.items():
-            print ("key %s element %s" ) % (key,element)
+            print ("key %s element %s" ) % (key, element)
             # self.__dict__[key] = element
             self.objectify(key, self.component_loader.props)
         print(self)

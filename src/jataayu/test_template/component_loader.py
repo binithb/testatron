@@ -2,7 +2,7 @@ __author__ = 'anupama'
 
 import jinja2
 import simplejson as json
-import globals as globals
+import project_suite_globals as project_suite_globals
 
 
 class ComponentLoader:
@@ -10,11 +10,10 @@ class ComponentLoader:
     JSON_KEY_PROPS = "props"
     JSON_KEY_LOC = "loc"
     JSON_KEY_ELEMENTS = "elements"
-    def __init__(self, json_file, section):
-        template_loader = jinja2.FileSystemLoader(searchpath="./")
+    def __init__(self, path, json_file, section):
+        template_loader = jinja2.FileSystemLoader(searchpath=path)
         template_env = jinja2.Environment(loader=template_loader)
-        template_file = json_file
-        template = template_env.get_template(template_file)
+        template = template_env.get_template(json_file)
         self.page = json.loads(template.render())
         self.span = self.page[self.JSON_KEY_ELEMENTS][section]
         self.props = {}
@@ -45,7 +44,7 @@ class ComponentLoader:
         print "locator %s " % locator
         css_type, uniqueid = locator[0:1], locator[1:]
         print "css_type %s, uniqueid %s" % (css_type, uniqueid)
-        self.driver = globals.get_driver()
+        self.driver = project_suite_globals.driver
         if 1 == len(css_type) and 0 < len(uniqueid):
             if '#' == css_type:
                 elem = self.driver.find_element_by_id(uniqueid)

@@ -1,3 +1,5 @@
+import os
+
 __author__ = 'anupama'
 # Copyright 2014 Anupama Kattiparambil Prakasan
 #
@@ -15,7 +17,8 @@ __author__ = 'anupama'
 
 
 import importlib
-# import globals
+import src.jataayu.test_template.project_suite_globals as project_suite_globals
+
 
 from selenium import webdriver
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
@@ -24,11 +27,11 @@ class PythonWebDriver(object):
     def __init__(self):
         binary = FirefoxBinary('/home/anupama/Downloads/sw/firefox/firefox')
         self.driver = webdriver.Firefox(firefox_binary=binary)
-        # globals.init()
-        # self.driver = globals.driver
+        project_suite_globals.driver = self.driver
 
-    def register_web_driver(self, home_page):
+    def register_web_driver(self, web_app, home_page):
         self.driver.get(home_page)
+        project_suite_globals.web_app = web_app
         # username = self.driver.find_element_by_id("signin-email")
         # print "username is"
         #     print username
@@ -41,35 +44,45 @@ class PythonWebDriver(object):
         pass
 
     def execute_function(self, function, class_name=None, web_app=None, **kwargs):
-        class_ = _get_class(class_name, web_app)
-        if class_:
-            return _execute_function(function, kwargs)
+        module = _get_module(class_name, web_app)
+        if module:
+            return _execute_function(module, function, **kwargs)
 
 
-def _get_class(class_name, web_app):
-    module_name = "src.web_apps." + web_app
-    import src.web_apps.twitter.test_cases.LoginTest
-    LoginTest.login_test()
+def _get_module(class_name, web_app):
+    sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+    print (os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+    import web_apps.twitter.test_cases.LoginTest as LoginTest
 
+    # import pdb ; pdb.set_trace()
+    # print "executing test"
+    # LoginTest.login_test()
+    # print "executed test"
 
-    print module_name
     try:
+        module_name = "src.web_apps." + web_app + ".test_cases." + class_name
+        print module_name
         module = importlib.import_module(module_name)
-        try:
-            class_ = getattr(module, class_name)()
-        except AttributeError:
-            raise AssertionError('class does not exist')
+        print "module %s " % module
+        # try:
+        #     print "class_name %s " % class_name
+        #     class_ = getattr(module, class_name)()
+        #     print "class %s " % class_
+        # except AttributeError:
+        #     raise AssertionError('class does not exist')
     except ImportError:
         raise AssertionError('module does not exist')
-    return class_ or None
+
+    return module or None
 
 
-def _execute_function(class_name, function_name):
+def _execute_function(module_name, function_name, **kwargs):
     try:
-        function = getattr(class_name, function_name)
+        function = getattr(module_name, function_name)
     except AttributeError:
         raise AssertionError('function does not exist')
-    return function()
+    print "function %s " % function
+    return function(kwargs)
 
 
 if __name__ == '__main__':

@@ -30,8 +30,11 @@ class NewTweet(WebComponent):
 
 
 
-login = Login ("Login.json", "login-span")
-login.login("netsgr8_4us@yahoo.com" , "thisispassword")
-new_tweet = NewTweet ("logged_in_home.json", "new_tweet")
-new_tweet.tweet("auto tweet")
-# TODO 1  # make driver common for all classes in a test, # write all classes for one .json file in one py file
+# login = Login ("Login.json", "login-span")
+# login.login("netsgr8_4us@yahoo.com" , "thisispassword")
+# new_tweet = NewTweet ("logged_in_home.json", "new_tweet")
+# new_tweet.tweet("auto tweet")
+# # TODO 1  # make driver common for all classes in a test, # write all classes for one .json file in one py file
+
+def new_tweet(test_input=None):
+    NewTweet().tweet("I  am a Robot")

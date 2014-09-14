@@ -19,7 +19,10 @@ from src.jataayu.test_template.web_component import WebComponent
 
 class Login(WebComponent):
     def __init__(self, section="login-span"):
-        super(Login, self).__init__(self.__class__+".json", section)
+        # print "str(self.__class__) : %s " % str(self.__class__)
+        # class_name = str(self.__class__)[str(self.__class__).rfind('.')+1:-2]
+        # print "class_name %s " % class_name
+        super(Login, self).__init__(self.__class__, section)
 
     def login(self, username, password):
         # print "self.username"

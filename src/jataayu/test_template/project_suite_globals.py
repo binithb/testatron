@@ -4,6 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 
 driver = None
+web_app = None
 
 
 def init(browser=None):
