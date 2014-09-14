@@ -1,6 +1,7 @@
 __author__ = 'anupama'
 
 import jinja2
+import time
 import simplejson as json
 import project_suite_globals as project_suite_globals
 
@@ -59,6 +60,7 @@ class ComponentLoader:
                 elem = None
 
         if elem:
+            highlight(elem)
             print elem.__dict__
         return elem
 
@@ -66,4 +68,13 @@ class ComponentLoader:
 # cmp.load()
 # print cmp.props
 
+
+def highlight(element):
+    parent_ = element._parent
+    def apply_style(s):
+        parent_.execute_script("arguments[0].setAttribute('style', arguments[1]);", element, s)
+    original_style = element.get_attribute('style')
+    apply_style("background: yellow; border: 2px solid red;")
+    time.sleep(.3)
+    apply_style(original_style)
 

@@ -1,4 +1,5 @@
 from src.web_apps.twitter.components.post_login_home.tweet_box import TweetBox
+import datetime
 
 __author__ = 'anupama'
 
@@ -10,5 +11,7 @@ class NewTweetTest:
     def new_tweet(self, tweet_message):
         self.tweet_box.tweet(tweet_message)
 
+
 def tweet(test_input=None):
-    NewTweetTest().new_tweet("I m a Robot who can tweet")
+    print "test_input : " + str(test_input)
+    NewTweetTest().new_tweet(test_input["tweet_message"] +"\n" + datetime.datetime.now().strftime("%A, %d. %B %Y %I:%M%p"))

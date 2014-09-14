@@ -43,16 +43,17 @@ class PythonWebDriver(object):
     def register_module(self, module):
         pass
 
-    def execute_function(self, function, class_name=None, web_app=None, **kwargs):
-        module = _get_module(class_name, web_app)
+    def execute_function(self, function, module_name=None, **kwargs):
+        module = _get_module(module_name)
         if module:
             return _execute_function(module, function, **kwargs)
 
 
-def _get_module(class_name, web_app):
+def _get_module(class_name):
+    web_app = project_suite_globals.web_app
     sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
     print (os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-    import web_apps.twitter.test_cases.LoginTest as LoginTest
+    # import web_apps.twitter.test_cases.LoginTest as LoginTest
 
     # import pdb ; pdb.set_trace()
     # print "executing test"
@@ -82,7 +83,11 @@ def _execute_function(module_name, function_name, **kwargs):
     except AttributeError:
         raise AssertionError('function does not exist')
     print "function %s " % function
-    return function(kwargs)
+    print "kwargs : " + str(kwargs)
+    args_dict = None
+    if "kwargs" in kwargs:
+        args_dict = kwargs["kwargs"]
+    return function(args_dict)
 
 
 if __name__ == '__main__':
