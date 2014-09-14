@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90cc3b1f-b57a-4d10-8629-5f00d47e1a50" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jataayu/app/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jataayu/app/application.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jataayu/running/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/jataayu/running/builder.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web_apps/twitter/test_cases/NewTweetTest.py" afterPath="$PROJECT_DIR$/src/web_apps/twitter/test_cases/NewTweetTest.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jataayu/test_template/component_loader.py" afterPath="$PROJECT_DIR$/src/jataayu/test_template/component_loader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server/python_webdriver.py" afterPath="$PROJECT_DIR$/src/server/python_webdriver.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Morpheus.iws" />
@@ -639,7 +632,11 @@
       <created>1410726019617</created>
       <updated>1410726019617</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="cleanup, highlighting">
+      <created>1410734065667</created>
+      <updated>1410734065667</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -733,7 +730,8 @@
     <MESSAGE value="started the RF interface" />
     <MESSAGE value="logged in from remote RF" />
     <MESSAGE value="first tweet from RF :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="first tweet from RF :)" />
+    <MESSAGE value="cleanup, highlighting" />
+    <option name="LAST_COMMIT_MESSAGE" value="cleanup, highlighting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
