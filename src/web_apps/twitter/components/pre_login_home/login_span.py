@@ -17,21 +17,15 @@ __author__ = 'anupama'
 from src.jataayu.test_template.web_component import WebComponent
 
 
-class Login(WebComponent):
-    def __init__(self, section="login-span"):
-        # print "str(self.__class__) : %s " % str(self.__class__)
-        # class_name = str(self.__class__)[str(self.__class__).rfind('.')+1:-2]
-        # print "class_name %s " % class_name
-        super(Login, self).__init__(self.__class__, section)
+class LoginSpan(WebComponent):
+    def __init__(self ):
+        super(LoginSpan, self).__init__(self.__class__)
 
     def login(self, username, password):
-        # print "self.username"
-        # print self.username
         self.username.send_keys(username)
         self.password.send_keys(password)
         self.login_button.click()
 
-
-# login = Login ("Login.json", "login-span")
+# login = Login ("pre_login_home.json", "login-span")
 # login.login("netsgr8_4us@yahoo.com" , "thisispassword")
 

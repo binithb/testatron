@@ -1,6 +1,6 @@
 {% extends "logged_in_base.json" %}
 {% block content %}
-    "new_tweet": {
+    "TweetBox": {
         "tweet_box": {
             "props": {
                 "loc": "#tweet-box-mini-home-profile"

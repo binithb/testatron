@@ -62,7 +62,7 @@ class ComponentLoader:
             print elem.__dict__
         return elem
 
-# cmp = ComponentLoader("Login.json", "login-span")
+# cmp = ComponentLoader("pre_login_home.json", "login-span")
 # cmp.load()
 # print cmp.props
 

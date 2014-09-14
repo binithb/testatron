@@ -14,13 +14,12 @@
 
 
 from src.jataayu.test_template.web_component import WebComponent
-from src.web_apps.twitter.components.login import Login
 
 __author__ = 'anupama'
 
-class NewTweet(WebComponent):
-    def __init__(self, section):
-        super(NewTweet, self).__init__(self.__class__+".json", section)
+class TweetBox(WebComponent):
+    def __init__(self):
+        super(TweetBox, self).__init__(self.__class__)
 
     def tweet(self, tweet_message):
         self.tweet_box.send_keys(tweet_message)
@@ -30,11 +29,11 @@ class NewTweet(WebComponent):
 
 
 
-# login = Login ("Login.json", "login-span")
+# login = Login ("pre_login_home.json", "login-span")
 # login.login("netsgr8_4us@yahoo.com" , "thisispassword")
-# new_tweet = NewTweet ("logged_in_home.json", "new_tweet")
+# new_tweet = NewTweet ("post_login_home.json", "new_tweet")
 # new_tweet.tweet("auto tweet")
 # # TODO 1  # make driver common for all classes in a test, # write all classes for one .json file in one py file
 
 def new_tweet(test_input=None):
-    NewTweet().tweet("I  am a Robot")
+    TweetBox().tweet("I  am a Robot")

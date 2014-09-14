@@ -2,12 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90cc3b1f-b57a-4d10-8629-5f00d47e1a50" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/jataayu/test_template/globals.py" afterPath="$PROJECT_DIR$/src/jataayu/test_template/project_suite_globals.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web_apps/twitter/test_cases/NewTweetTest.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web_apps/twitter/components/post_login_home/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/web_apps/twitter/components/pre_login_home/__init__.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/web_apps/twitter/components/Login.json" afterPath="$PROJECT_DIR$/src/web_apps/twitter/components/pre_login_home.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/web_apps/twitter/components/logged_in_home.json" afterPath="$PROJECT_DIR$/src/web_apps/twitter/components/post_login_home.json" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/web_apps/twitter/components/login.py" afterPath="$PROJECT_DIR$/src/web_apps/twitter/components/pre_login_home/login_span.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/web_apps/twitter/components/new_tweet.py" afterPath="$PROJECT_DIR$/src/web_apps/twitter/components/post_login_home/tweet_box.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web_apps/twitter/test_cases/LoginTest.py" afterPath="$PROJECT_DIR$/src/web_apps/twitter/test_cases/LoginTest.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jataayu/test_template/component_loader.py" afterPath="$PROJECT_DIR$/src/jataayu/test_template/component_loader.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web_apps/twitter/components/login.py" afterPath="$PROJECT_DIR$/src/web_apps/twitter/components/login.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web_apps/twitter/components/new_tweet.py" afterPath="$PROJECT_DIR$/src/web_apps/twitter/components/new_tweet.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/server/python_webdriver.py" afterPath="$PROJECT_DIR$/src/server/python_webdriver.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jataayu/test_template/jinja_loader.py" afterPath="$PROJECT_DIR$/src/jataayu/test_template/jinja_loader.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/web_apps/twitter/components/login_home.py" afterPath="$PROJECT_DIR$/src/web_apps/twitter/components/login_home.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jataayu/test_template/project_suite_globals.py" afterPath="$PROJECT_DIR$/src/jataayu/test_template/project_suite_globals.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/jataayu/test_template/web_component.py" afterPath="$PROJECT_DIR$/src/jataayu/test_template/web_component.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -35,18 +41,18 @@
       <file leaf-file-name="LoginTest.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/web_apps/twitter/test_cases/LoginTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new_tweet.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/web_apps/twitter/components/new_tweet.py">
+      <file leaf-file-name="NewTweetTest.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/web_apps/twitter/test_cases/NewTweetTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="197" max-vertical-offset="810">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.2254025" vertical-offset="0" max-vertical-offset="559">
+              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -55,8 +61,8 @@
       <file leaf-file-name="python_webdriver.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/server/python_webdriver.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1080" max-vertical-offset="1746">
-              <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1746">
+              <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -65,8 +71,8 @@
       <file leaf-file-name="project_suite_globals.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jataayu/test_template/project_suite_globals.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="846">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="738">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <element signature="e#24#54#0" expanded="true" />
               </folding>
@@ -74,33 +80,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="component_loader.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/jataayu/test_template/component_loader.py">
+      <file leaf-file-name="login_span.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/web_apps/twitter/components/pre_login_home/login_span.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1350">
-              <caret line="46" column="49" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
-              <folding>
-                <element signature="e#24#37#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/server/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/web_apps/twitter/components/login.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.29159212" vertical-offset="215" max-vertical-offset="774">
-              <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="666">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -109,28 +93,40 @@
       <file leaf-file-name="web_component.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/jataayu/test_template/web_component.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="990">
-              <caret line="30" column="67" selection-start-line="30" selection-start-column="67" selection-end-line="30" selection-end-column="67" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1278">
+              <caret line="30" column="63" selection-start-line="30" selection-start-column="63" selection-end-line="30" selection-end-column="63" />
+              <folding>
+                <element signature="e#628#672#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logged_in_base.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/web_apps/twitter/components/logged_in_base.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1278">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Login.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/web_apps/twitter/components/Login.json">
+      <file leaf-file-name="pre_login_home.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/web_apps/twitter/components/pre_login_home.json">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="468">
-              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logged_in_home.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/web_apps/twitter/components/logged_in_home.json">
+      <file leaf-file-name="post_login_home.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/web_apps/twitter/components/post_login_home.json">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
-              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -186,12 +182,20 @@
         <option value="$PROJECT_DIR$/src/jataayu/test_template/__init__.py" />
         <option value="$PROJECT_DIR$/src/web_apps/twitter/test_cases/login_test.py" />
         <option value="$PROJECT_DIR$/src/jataayu/test_template/globals.py" />
-        <option value="$PROJECT_DIR$/src/web_apps/twitter/components/login.py" />
-        <option value="$PROJECT_DIR$/src/jataayu/test_template/web_component.py" />
         <option value="$PROJECT_DIR$/src/jataayu/test_template/component_loader.py" />
         <option value="$PROJECT_DIR$/src/server/python_webdriver.py" />
-        <option value="$PROJECT_DIR$/src/web_apps/twitter/test_cases/LoginTest.py" />
         <option value="$PROJECT_DIR$/src/web_apps/twitter/test_cases/new_tweet.py" />
+        <option value="$PROJECT_DIR$/src/web_apps/twitter/components/tweet_box.py" />
+        <option value="$PROJECT_DIR$/src/web_apps/twitter/components/login.py" />
+        <option value="$PROJECT_DIR$/src/web_apps/twitter/components/pre_login_home/login.py" />
+        <option value="$PROJECT_DIR$/src/web_apps/twitter/components/pre_login_home.json" />
+        <option value="$PROJECT_DIR$/src/web_apps/twitter/components/post_login_home.json" />
+        <option value="$PROJECT_DIR$/src/web_apps/twitter/components/pre_login_home/login_span.py" />
+        <option value="$PROJECT_DIR$/src/jataayu/test_template/web_component.py" />
+        <option value="$PROJECT_DIR$/src/jataayu/test_template/project_suite_globals.py" />
+        <option value="$PROJECT_DIR$/src/web_apps/twitter/test_cases/LoginTest.py" />
+        <option value="$PROJECT_DIR$/src/web_apps/twitter/test_cases/NewTweetTest.py" />
+        <option value="$PROJECT_DIR$/src/web_apps/twitter/components/post_login_home/tweet_box.py" />
       </list>
     </option>
   </component>
@@ -374,6 +378,66 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="web_apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pre_login_home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Morpheus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Morpheus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web_apps" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="post_login_home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Morpheus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Morpheus" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="server" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -442,37 +506,20 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/web_apps/twitter/test_cases" />
       <recent name="$PROJECT_DIR$/src/jataayu/test_template" />
       <recent name="$PROJECT_DIR$/src/web_apps/twitter/test_input" />
       <recent name="$PROJECT_DIR$/src/web_apps/twitter" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/web_apps/twitter/components/post_login_home" />
       <recent name="$PROJECT_DIR$/src/web_apps/twitter/components" />
+      <recent name="$PROJECT_DIR$/src/web_apps/twitter/components/pre_login_home" />
       <recent name="$PROJECT_DIR$/src/web_apps/twitter/test_cases" />
       <recent name="$PROJECT_DIR$/src/web_apps/twitter" />
-      <recent name="$PROJECT_DIR$/src/jataayu" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Component2">
-    <configuration default="false" name="globals" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/jataayu/test_template" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Morpheus" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/jataayu/test_template/project_suite_globals.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.LoginTest">
     <configuration default="false" name="login" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -485,7 +532,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Morpheus" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/web_apps/twitter/components/login.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/web_apps/twitter/components/pre_login_home/login_span.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -521,7 +568,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Morpheus" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/web_apps/twitter/components/new_tweet.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/web_apps/twitter/components/post_login_home/tweet_box.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
@@ -549,6 +596,24 @@
       <option name="PUREUNITTEST" value="true" />
       <option name="PARAMS" value="" />
       <option name="USE_PARAM" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="LoginTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src/web_apps/twitter/test_cases" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Morpheus" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/web_apps/twitter/test_cases/LoginTest.py" />
+      <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
@@ -696,19 +761,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.Component2" />
-      <item index="1" class="java.lang.String" itemvalue="Python.globals" />
-      <item index="2" class="java.lang.String" itemvalue="Python.login" />
-      <item index="3" class="java.lang.String" itemvalue="Python.login_home" />
-      <item index="4" class="java.lang.String" itemvalue="Python.new_tweet" />
-      <item index="5" class="java.lang.String" itemvalue="Python tests.Unittests in testcase_loader" />
+      <item index="1" class="java.lang.String" itemvalue="Python.login" />
+      <item index="2" class="java.lang.String" itemvalue="Python.login_home" />
+      <item index="3" class="java.lang.String" itemvalue="Python.new_tweet" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in testcase_loader" />
+      <item index="5" class="java.lang.String" itemvalue="Python.LoginTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in testcase_loader" />
-        <item index="1" class="java.lang.String" itemvalue="Python.new_tweet" />
-        <item index="2" class="java.lang.String" itemvalue="Python.login" />
-        <item index="3" class="java.lang.String" itemvalue="Python.login_home" />
-        <item index="4" class="java.lang.String" itemvalue="Python.globals" />
+        <item index="0" class="java.lang.String" itemvalue="Python.LoginTest" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in testcase_loader" />
+        <item index="2" class="java.lang.String" itemvalue="Python.new_tweet" />
+        <item index="3" class="java.lang.String" itemvalue="Python.login" />
+        <item index="4" class="java.lang.String" itemvalue="Python.login_home" />
       </list>
     </recent_temporary>
   </component>
@@ -758,7 +823,11 @@
       <created>1410650118217</created>
       <updated>1410650118217</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="logged in from remote RF">
+      <created>1410718157555</created>
+      <updated>1410718157555</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -785,6 +854,7 @@
     <frame x="-4" y="25" width="1374" height="725" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32857144" sideWeight="0.49962825" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.49962825" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.49962825" order="6" side_tool="false" content_ui="tabs" />
@@ -794,12 +864,11 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3994452" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.50037175" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.49962825" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32894737" sideWeight="0.49962825" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295129" sideWeight="0.49962825" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -850,7 +919,8 @@
     <MESSAGE value="logged in , have to do first tweet" />
     <MESSAGE value="first tweet done &#10;next is to load input from test input files" />
     <MESSAGE value="started the RF interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="started the RF interface" />
+    <MESSAGE value="logged in from remote RF" />
+    <option name="LAST_COMMIT_MESSAGE" value="logged in from remote RF" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -858,16 +928,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/jataayu/test_template/project_suite_globals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="18" max-vertical-offset="324">
-          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-          <folding>
-            <element signature="e#24#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/jataayu/test_template/component_loader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="360" max-vertical-offset="954">
@@ -1123,13 +1183,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/web_apps/twitter/components/logged_in_base.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="1278">
-          <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/web_apps/twitter/test_input/login_test.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
@@ -1205,24 +1258,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/jataayu/test_template/project_suite_globals.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="846">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#54#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/jataayu/test_template/web_component.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="990">
-          <caret line="30" column="67" selection-start-line="30" selection-start-column="67" selection-end-line="30" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/jataayu/test_template/component_loader.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1350">
@@ -1233,50 +1268,86 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/web_apps/twitter/components/logged_in_base.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1278">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web_apps/twitter/components/post_login_home.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web_apps/twitter/components/pre_login_home.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="468">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jataayu/test_template/web_component.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1278">
+          <caret line="30" column="63" selection-start-line="30" selection-start-column="63" selection-end-line="30" selection-end-column="63" />
+          <folding>
+            <element signature="e#628#672#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/jataayu/test_template/project_suite_globals.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="738">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web_apps/twitter/components/pre_login_home/login_span.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="666">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/server/python_webdriver.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1080" max-vertical-offset="1746">
-          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1746">
+          <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/web_apps/twitter/test_cases/LoginTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/web_apps/twitter/components/Login.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="468">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/web_apps/twitter/components/new_tweet.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="197" max-vertical-offset="810">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/web_apps/twitter/components/logged_in_home.json">
-      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/web_apps/twitter/components/login.py">
+    <entry file="file://$PROJECT_DIR$/src/web_apps/twitter/components/post_login_home/tweet_box.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29159212" vertical-offset="215" max-vertical-offset="774">
-          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.454039" vertical-offset="197" max-vertical-offset="810">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web_apps/twitter/test_cases/NewTweetTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2254025" vertical-offset="0" max-vertical-offset="559">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
           <folding />
         </state>
       </provider>

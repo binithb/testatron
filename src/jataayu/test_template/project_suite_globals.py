@@ -7,19 +7,13 @@ driver = None
 web_app = None
 
 
-def init(browser=None):
-    """
-    :return:
-    """
-    if not globals.driver:
-        binary = FirefoxBinary('/home/anupama/Downloads/sw/firefox/firefox')
-        globals.driver = webdriver.Firefox(firefox_binary=binary)
-    # driver.get("http://www.twitter.com")
-    # username = driver.find_element_by_id("signin-email")
-    # print "username is"
-    # print username
-    # username.send_keys("123")
-
+def init():
+    global driver
+    global web_app
+    binary = FirefoxBinary('/home/anupama/Downloads/sw/firefox/firefox')
+    driver = webdriver.Firefox(firefox_binary=binary)
+    web_app = "twitter"
+    driver.get("http://www.twitter.com")
 
 # def get_driver():
 #     """

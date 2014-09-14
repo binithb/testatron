@@ -12,22 +12,3 @@ __author__ = 'anupama'
 #  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #  See the License for the specific language governing permissions and
 #  limitations under the License.
-
-
-from src.jataayu.test_template.web_component import WebComponent
-
-class LoginHome(WebComponent):
-    def __init__(self, json_file, section):
-        super(LoginHome, self).__init__(json_file,section)
-
-    def check_about(self, ):
-        pass
-        # print "self.username"
-        # print self.username
-        print "about"
-        print self.about
-
-
-login_home = LoginHome ("pre_login_home.json", "footer")
-login_home.check_about()
-
