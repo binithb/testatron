@@ -1,0 +1,16 @@
+{% extends "logged_in_base.json" %}
+{% block content %}
+    "TweetBox": {
+        "tweet_box": {
+            "props": {
+                "loc": "#tweet-box-mini-home-profile"
+            }
+        },
+        "tweet_button": {
+            "props": {
+                "loc": "div.toolbar:nth-child(10) > div:nth-child(2) > button:nth-child(3)",
+                "visible" :false
+            }
+        }
+    },
+{% endblock %}

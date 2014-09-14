@@ -1,0 +1,65 @@
+{
+    "elements": {
+        "gobal_actions": {
+            "home": {
+                "props": {
+                    "loc": "#global-nav-home > a:nth-child(1)"
+                }
+            },
+            "notifications": {
+                "props": {
+                    "loc": ".people > a:nth-child(1) > span:nth-child(2)"
+                }
+            },
+            "discover": {
+                "props": {
+                    "loc": ".topics > a:nth-child(1) > span:nth-child(2)"
+                }
+            },
+            "me": {
+                "props": {
+                    "loc": ".profile > a:nth-child(1) > span:nth-child(1)"
+                }
+            },
+            "swift": {
+                "props": {
+                    "loc": "h1.Icon"
+                }
+            },"search": {
+                "props": {
+                    "loc": "#search-query"
+                }
+            },"direct_message": {
+                "props": {
+                    "loc": ".global-dm-nav"
+                }
+            },"settings": {
+                "props": {
+                    "loc": ".Icon--cog"
+                }
+            },"tweet": {
+                "props": {
+                    "loc": "#global-new-tweet-button"
+                }
+            }
+        },
+
+
+{% block content %} {% endblock %}
+
+        "footer": {
+            "about": {
+                "props": {
+                    "loc": ".footer > ul:nth-child(1) > li:nth-child(1)"
+                }
+            },
+            "copyright": {
+                "props": {
+                    "loc": ".copyright"
+                }
+            }
+        }
+    }
+
+}
+
