@@ -11,6 +11,6 @@ class LoginTest:
         self.login_span.login(username, password)
         # self.login.login(self.test_input.username, self.test_input.password)
 
-def login_test(test_input=None):
-    LoginTest().login_test("netsgr8_4us@yahoo.com" ,"thisispassword")
+def login_test(username):
+    LoginTest().login_test("netsgr8_4us@yahoo.com", "thisispassword")
 
