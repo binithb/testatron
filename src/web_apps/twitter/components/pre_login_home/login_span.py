@@ -14,7 +14,7 @@ __author__ = 'anupama'
 #  limitations under the License.
 
 
-from src.jataayu.test_template.web_component import WebComponent
+from src.morpheus.test_template.web_component import WebComponent
 
 
 class LoginSpan(WebComponent):

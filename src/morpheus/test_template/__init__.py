@@ -33,15 +33,15 @@ __author__ = 'anupama'
 #
 # def _run(inpath=None, updatecheck=True, debug_console=False):
 #     try:
-#         from jataayu.application import Jataayu
+#         from morpheus.application import Jataayu
 #     except ImportError:
 #         raise
 #     if inpath:
 #         inpath = unicode(inpath, sys.getfilesystemencoding())
-#     jataayu = Jataayu(inpath, updatecheck)
+#     morpheus = Jataayu(inpath, updatecheck)
 #     if debug_console:
-#         _start_debug_console(jataayu)
-#     jataayu.MainLoop()
+#         _start_debug_console(morpheus)
+#     morpheus.MainLoop()
 #
 #
 # def _print_stacks():
@@ -50,13 +50,13 @@ __author__ = 'anupama'
 #         print(id2name[threadId])
 #         traceback.print_stack(f=stack)
 #
-# def _start_debug_console(jataayu):
+# def _start_debug_console(morpheus):
 #     import code
 #     help_string = """\
 # Jataayu - access to the running application
 # print_stacks() - print current stack traces
 # """
-#     console = code.InteractiveConsole(locals={'Jataayu':jataayu, 'print_stacks':_print_stacks})
+#     console = code.InteractiveConsole(locals={'Jataayu':morpheus, 'print_stacks':_print_stacks})
 #     thread = threading.Thread(target=lambda: console.interact(help_string))
 #     thread.start()
 #

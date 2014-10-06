@@ -20,8 +20,8 @@ __author__ = 'anupama'
 This module can be executed from the command line using the following
 approaches::
 
-    python -m jataayu.run
-    python path/to/jataayu/run.py
+    python -m morpheus.run
+    python path/to/morpheus/run.py
 
 """
 
@@ -29,7 +29,7 @@ USAGE = """Jataayu
 
 Version:  <VERSION>
 
-Usage:  jataayu [options] data_sources
+Usage:  morpheus [options] data_sources
 
 
 Options
@@ -45,18 +45,18 @@ JATAAYU_OPTIONS           Space separated list of default options to be placed
 Examples
 ========
 
-# Simple test run with `jataayu` without options.
-$ jataayu tests.html
+# Simple test run with `morpheus` without options.
+$ morpheus tests.html
 
 """
 
 import sys
 
-# if 'jataayu' not in sys.modules and __name__ == '__main__':
+# if 'morpheus' not in sys.modules and __name__ == '__main__':
     import pythonpathsetter
 
-# from jataayu.conf import RobotSettings
-# from jataayu.output import LOGGER
+# from morpheus.conf import RobotSettings
+# from morpheus.output import LOGGER
 from jataayu.utils import Application
 
 
@@ -96,7 +96,7 @@ def run_cli(arguments):
 
     Example::
 
-        from jataayu import run_cli
+        from morpheus import run_cli
 
         run_cli(['--include', 'tag', 'path/to/tests.html'])
     """
@@ -107,7 +107,7 @@ def run(*datasources, **options):
     """Executes given Robot Framework data sources with given options.
 
     Data sources are paths to files and directories, similarly as when running
-    `jataayu` command from the command line. Options are given as keyword
+    `morpheus` command from the command line. Options are given as keyword
     arguments and their names are same as long command line options except
     without hyphens.
 
@@ -122,7 +122,7 @@ def run(*datasources, **options):
 
     Example::
 
-        from jataayu import run
+        from morpheus import run
 
         run('path/to/tests.html', include=['tag1', 'tag2'])
         with open('stdout.txt', 'w') as stdout:
@@ -130,8 +130,8 @@ def run(*datasources, **options):
 
     Equivalent command line usage::
 
-        jataayu --include tag1 --include tag2 path/to/tests.html
-        jataayu --report r.html --log NONE t1.txt t2.txt > stdout.txt
+        morpheus --include tag1 --include tag2 path/to/tests.html
+        morpheus --report r.html --log NONE t1.txt t2.txt > stdout.txt
     """
     return Jataayu().execute(*datasources, **options)
 

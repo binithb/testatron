@@ -17,7 +17,7 @@ __author__ = 'anupama'
 
 
 import importlib
-import src.jataayu.test_template.project_suite_globals as project_suite_globals
+import src.morpheus.test_template.project_suite_globals as project_suite_globals
 
 
 from selenium import webdriver
