@@ -1,9 +1,9 @@
 {
     "elements": {
-        "gobal_actions": {
+        "GlobalActions": {
             "home": {
                 "props": {
-                    "loc": "#global-nav-home > a:nth-child(1)"
+                    "loc": "#global-nav-home"
                 }
             },
             "notifications": {
