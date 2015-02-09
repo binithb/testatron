@@ -14,7 +14,7 @@ __author__ = 'anupama'
 #  limitations under the License.
 
 
-from src.morpheus.test_template.web_component import WebComponent
+from src.testatron.test_template.web_component import WebComponent
 
 class LoginHome(WebComponent):
     def __init__(self, json_file, section):
