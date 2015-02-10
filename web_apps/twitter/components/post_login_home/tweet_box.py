@@ -13,7 +13,7 @@
 #  limitations under the License.
 
 
-from src.testatron.test_template.web_component import WebComponent
+from testatron.test_template.web_component import WebComponent
 
 __author__ = 'anupama'
 

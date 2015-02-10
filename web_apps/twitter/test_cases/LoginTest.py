@@ -1,4 +1,4 @@
-from src.web_apps.twitter.components.pre_login_home.login_span import LoginSpan
+from web_apps.twitter.components.pre_login_home.login_span import LoginSpan
 
 __author__ = 'anupama'
 

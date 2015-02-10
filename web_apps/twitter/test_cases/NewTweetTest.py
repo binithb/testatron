@@ -1,5 +1,7 @@
-from src.web_apps.twitter.components.post_login_home.tweet_box import TweetBox
 import datetime
+
+from web_apps.twitter.components.post_login_home.tweet_box import TweetBox
+
 
 __author__ = 'anupama'
 

@@ -14,9 +14,10 @@ __author__ = 'anupama'
 #  limitations under the License.
 
 
-from component_loader import ComponentLoader
-import project_suite_globals as project_suite_globals
 import os
+
+from testatron.test_template.component_loader import ComponentLoader
+import project_suite_globals as project_suite_globals
 
 
 class WebComponent(object):

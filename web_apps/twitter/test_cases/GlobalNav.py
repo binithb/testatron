@@ -1,5 +1,4 @@
-from src.web_apps.twitter.components.post_login_home.global_actions import GlobalActions
-import datetime
+from web_apps.twitter.components.post_login_home.global_actions import GlobalActions
 
 __author__ = 'anupama'
 

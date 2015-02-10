@@ -14,18 +14,20 @@ __author__ = 'anupama'
 #  limitations under the License.
 
 
-from src.testatron.test_template.web_component import WebComponent
+from testatron.test_template.web_component import WebComponent
+
+class LoginHome(WebComponent):
+    def __init__(self, json_file, section):
+        super(LoginHome, self).__init__(json_file,section)
+
+    def check_about(self, ):
+        pass
+        # print "self.username"
+        # print self.username
+        print "about"
+        print self.about
 
 
-class LoginSpan(WebComponent):
-    def __init__(self ):
-        super(LoginSpan, self).__init__(self.__class__)
-
-    def login(self, username, password):
-        self.username.send_keys(username)
-        self.password.send_keys(password)
-        self.login_button.click()
-
-# login = Login ("pre_login_home.json", "login-span")
-# login.login("netsgr8_4us@yahoo.com" , "thisispassword")
+login_home = LoginHome ("pre_login_home.json", "footer")
+login_home.check_about()
 
