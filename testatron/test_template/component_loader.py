@@ -1,9 +1,10 @@
 __author__ = 'anupama'
 
-import jinja2
 import time
+
+import jinja2
 import simplejson as json
-import project_suite_globals as project_suite_globals
+from testatron.test_template import project_suite_globals
 
 
 class ComponentLoader:
