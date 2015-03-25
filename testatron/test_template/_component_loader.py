@@ -5,9 +5,23 @@ import time
 import jinja2
 import simplejson as json
 from testatron.test_template import _project_suite_globals as project_suite_globals
+from Selenium2Library import Selenium2Library
+
+s2l_handle= None
+
+def get_s2l():
+    global s2l_handle
+    if not s2l_handle:
+        s2l_handle = Selenium2Library()
+    return s2l_handle
 
 
-class ComponentLoader:
+class S2L(object):
+    def __init__(self):
+        self.s2l = get_s2l()
+
+
+class ComponentLoader(S2L):
     JSON_KEY_VISIBLE = "visible"
     JSON_KEY_PROPS = "props"
     JSON_KEY_LOC = "loc"
