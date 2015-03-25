@@ -16,8 +16,8 @@ __author__ = 'anupama'
 
 import os
 
-from testatron.test_template.component_loader import ComponentLoader
-import project_suite_globals as project_suite_globals
+from testatron.test_template._component_loader import ComponentLoader
+import _project_suite_globals as project_suite_globals
 
 
 class WebComponent(object):
@@ -51,13 +51,13 @@ def get_package_and_class(class_path):
     class_path = str(class_path)
     class_name = class_path[class_path.rfind('.')+1:-2]
     print class_name
-    module_name_withot_class = class_path[:class_path.rfind('.')]
-    print module_name_withot_class
-    module_name = module_name_withot_class [module_name_withot_class .rfind('.')+1:]
+    module_name_without_class = class_path[:class_path.rfind('.')]
+    print module_name_without_class
+    module_name = module_name_without_class[module_name_without_class .rfind('.')+1:]
     print module_name
-    package_name_without_module = module_name_withot_class[:module_name_withot_class.rfind('.')]
+    package_name_without_module = module_name_without_class[:module_name_without_class.rfind('.')]
     print package_name_without_module
-    package_name = package_name_without_module [package_name_without_module .rfind('.')+1:]
+    package_name = package_name_without_module[package_name_without_module .rfind('.')+1:]
     print package_name
     return package_name, class_name
 
