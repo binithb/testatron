@@ -4,7 +4,7 @@ import time
 
 import jinja2
 import simplejson as json
-from testatron.test_template import project_suite_globals
+from testatron.test_template import _project_suite_globals as project_suite_globals
 
 
 class ComponentLoader:
