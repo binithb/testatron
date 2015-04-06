@@ -15,7 +15,6 @@ def get_s2l():
             s2l_handle = BuiltIn().get_library_instance("Selenium2Library")
         except RuntimeError:
             s2l_handle = Selenium2Library()
-        # s2l_handle.open_browser("http://google.com")
     return s2l_handle
 
 
@@ -69,6 +68,8 @@ class ComponentLoader(S2L):
         css_type, uniqueid = locator[0:1], locator[1:]
         print "css_type %s, uniqueid %s" % (css_type, uniqueid)
         # self.driver = project_suite_globals.driver
+        print "waiting 30 s for element"
+        self.s2l.wait_until_element_is_visible("css=" + css_type + uniqueid, 30)
         if 1 == len(css_type) and 0 < len(uniqueid):
             if '#' == css_type:
                 elem = self.driver.find_element_by_id(uniqueid)
