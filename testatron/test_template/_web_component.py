@@ -21,27 +21,24 @@ import _project_suite_globals as project_suite_globals
 
 
 class WebComponent(object):
-    def __init__(self, class_path):
+    def __init__(self, class_path, json_path):
         package_name, class_name = get_package_and_class(class_path)
         print "package_name %s class_name : %s " % (package_name, class_name)
-        # web_component_json_file = str(class_name)[str(class_name).rfind('.')+1:-2] + ".json"
-        # web_component_json_file = str(class_name)[str(class_name).rfind('.')+1:-2] + ".json"
-        # print "web_component_json_file %s " % web_component_json_file
         print "cwd :%s " % os.getcwd()
         print "project_suite_globals.web_app :%s " % project_suite_globals.web_app
-        web_component_json_path = os.path.join(os.getcwd(), "src", "web_apps", project_suite_globals.web_app, "components")
+        web_component_json_path = os.path.join(json_path)
 
         self.component_loader = ComponentLoader(web_component_json_path, package_name+".json", class_name)
         self.component_loader.load()
         print self.component_loader.props
         for key, element in self.component_loader.props.items():
             print ("key %s element %s" ) % (key, element)
-            # self.__dict__[key] = element
             self.objectify(key, self.component_loader.props)
         print(self)
         print(self.__dict__)
+        self.s2l = self.component_loader.s2l
+        self.driver = self.component_loader.driver
         # print self.username
-        # self.component_loader.driver.quit()
 
     def objectify(self, key, dict):
         self.__dict__[key] = dict [key]
@@ -61,6 +58,5 @@ def get_package_and_class(class_path):
     print package_name
     return package_name, class_name
 
-# self.component_loader = WebComponent("pre_login_home.json", "login-span")
 
 
