@@ -67,7 +67,6 @@ class ComponentLoader(S2L):
         print "locator %s " % locator
         css_type, uniqueid = locator[0:1], locator[1:]
         print "css_type %s, uniqueid %s" % (css_type, uniqueid)
-        # self.driver = project_suite_globals.driver
         print "waiting 30 s for element"
         self.s2l.wait_until_element_is_visible("css=" + css_type + uniqueid, 30)
         if 1 == len(css_type) and 0 < len(uniqueid):
@@ -87,10 +86,6 @@ class ComponentLoader(S2L):
             highlight(elem)
             print elem.__dict__
         return elem
-
-# cmp = ComponentLoader("pre_login_home.json", "login-span")
-# cmp.load()
-# print cmp.props
 
 
 def highlight(element):
