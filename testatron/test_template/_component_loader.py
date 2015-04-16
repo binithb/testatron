@@ -31,6 +31,7 @@ class ComponentLoader(S2L):
     JSON_KEY_PROPS = "props"
     JSON_KEY_LOC = "loc"
     JSON_KEY_ELEMENTS = "elements"
+    JSON_KEY_TYPE = "list"
     def __init__(self, path, json_file, section):
         super(ComponentLoader, self).__init__()
         template_loader = jinja2.FileSystemLoader(searchpath=path)
@@ -51,33 +52,39 @@ class ComponentLoader(S2L):
             print self.span[element]
             props = self.span[element][self.JSON_KEY_PROPS]
             print props
-            if self.JSON_KEY_VISIBLE in props :
+            if self.JSON_KEY_VISIBLE in props:
                     props[self.JSON_KEY_VISIBLE] = make_visible
                     if not props[self.JSON_KEY_VISIBLE]:
                         print "skipping invisible element"
                         return None
 
-            print self.span[element][self.JSON_KEY_PROPS][self.JSON_KEY_LOC]
-            self.props[element] = self._get_locator_by_type(self.span[element][self.JSON_KEY_PROPS][self.JSON_KEY_LOC])
-            return self.props[element]
+            if self.JSON_KEY_TYPE in props and props[self.JSON_KEY_TYPE]:
+                self.props[element] = self.driver.find_elements_by_css_selector\
+                    (self.span[element][self.JSON_KEY_PROPS][self.JSON_KEY_LOC])
+            else:
+                print self.span[element][self.JSON_KEY_PROPS][self.JSON_KEY_LOC]
+                self.props[element] = self._get_locator_by_type(self.span[element][self.JSON_KEY_PROPS][self.JSON_KEY_LOC])
+                return self.props[element]
 
 
     def _get_locator_by_type(self, locator):
 
         print "locator %s " % locator
-        css_type, uniqueid = locator[0:1], locator[1:]
-        print "css_type %s, uniqueid %s" % (css_type, uniqueid)
+        locator_type, uniqueid = locator[0:1], locator[1:]
+        print "locator_type %s, uniqueid %s" % (locator_type, uniqueid)
         print "waiting 30 s for element"
-        self.s2l.wait_until_element_is_visible("css=" + css_type + uniqueid, 30)
-        if 1 == len(css_type) and 0 < len(uniqueid):
-            if '#' == css_type:
+        self.s2l.wait_until_element_is_visible("css=" + locator_type + uniqueid, 30)
+        if 1 == len(locator_type) and 0 < len(uniqueid):
+            if '#' == locator_type:
                 elem = self.driver.find_element_by_id(uniqueid)
-            elif '.' == css_type and ' ' not in uniqueid:
+            elif '.' == locator_type and ' ' not in uniqueid:
                 elem = self.driver.find_element_by_class_name(uniqueid)
-            elif '.' == css_type and ' ' in uniqueid:
-                elem = self.driver.find_element_by_css_selector(css_type+uniqueid)
+            elif '.' == locator_type and ' ' in uniqueid:
+                elem = self.driver.find_element_by_css_selector(locator_type+uniqueid)
             elif ' ' in uniqueid:
-                elem = self.driver.find_element_by_css_selector(css_type+uniqueid)
+                elem = self.driver.find_element_by_css_selector(locator_type+uniqueid)
+            elif '/' == locator_type:
+                elem = self.driver.find_element_by_xpath(locator_type+uniqueid)
             else:
                 print "unsupported location finder method"
                 elem = None
