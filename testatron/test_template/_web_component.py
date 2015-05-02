@@ -18,27 +18,27 @@ import os
 
 from testatron.test_template._component_loader import ComponentLoader
 import _project_suite_globals as project_suite_globals
+from robot.api import logger
 
 
 class WebComponent(object):
     def __init__(self, class_path, json_path):
         package_name, class_name = get_package_and_class(class_path)
-        print "package_name %s class_name : %s " % (package_name, class_name)
-        print "cwd :%s " % os.getcwd()
-        print "project_suite_globals.web_app :%s " % project_suite_globals.web_app
+        logger.debug("package_name %s class_name : %s " % (package_name, class_name))
+        logger.debug("cwd :%s " % os.getcwd())
+        logger.debug("project_suite_globals.web_app :%s " % project_suite_globals.web_app)
         web_component_json_path = os.path.join(json_path)
 
         self.component_loader = ComponentLoader(web_component_json_path, package_name+".json", class_name)
         self.component_loader.load()
-        print self.component_loader.props
+        logger.debug("component_loader.props "+str(self.component_loader.props))
         for key, element in self.component_loader.props.items():
-            print ("key %s element %s" ) % (key, element)
+            logger.debug(("key %s element %s" ) % (key, element))
             self.objectify(key, self.component_loader.props)
-        print(self)
-        print(self.__dict__)
+        logger.debug("self.__dict__ " +str(self.__dict__))
         self.s2l = self.component_loader.s2l
         self.driver = self.component_loader.driver
-        # print self.username
+        # logger.debug(self.username
 
     def objectify(self, key, dict):
         self.__dict__[key] = dict [key]
@@ -47,15 +47,15 @@ class WebComponent(object):
 def get_package_and_class(class_path):
     class_path = str(class_path)
     class_name = class_path[class_path.rfind('.')+1:-2]
-    print class_name
+    logger.debug("class_name "+class_name)
     module_name_without_class = class_path[:class_path.rfind('.')]
-    print module_name_without_class
+    logger.debug("module_name_without_class "+module_name_without_class)
     module_name = module_name_without_class[module_name_without_class .rfind('.')+1:]
-    print module_name
+    logger.debug("module_name "+module_name)
     package_name_without_module = module_name_without_class[:module_name_without_class.rfind('.')]
-    print package_name_without_module
+    logger.debug("package_name_without_module " +package_name_without_module)
     package_name = package_name_without_module[package_name_without_module .rfind('.')+1:]
-    print package_name
+    logger.debug("package_name "+package_name)
     return package_name, class_name
 
 

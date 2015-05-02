@@ -5,6 +5,7 @@ import jinja2
 import simplejson as json
 from Selenium2Library import Selenium2Library
 from robot.libraries.BuiltIn import BuiltIn
+from robot.api import logger
 
 s2l_handle = None
 
@@ -40,7 +41,7 @@ class ComponentLoader(S2L):
         self.page = json.loads(template.render())
         self.span = self.page[self.JSON_KEY_ELEMENTS][section]
         self.props = {}
-        print self.span
+        logger.debug(self.span)
         self.driver = self.s2l._current_browser()
 
     def load(self):
@@ -48,50 +49,57 @@ class ComponentLoader(S2L):
             self.detect_element(element)
 
     def detect_element(self, element, make_visible=False):
-            print element
-            print self.span[element]
+            logger.debug(element)
+            logger.debug(self.span[element])
             props = self.span[element][self.JSON_KEY_PROPS]
-            print props
+            logger.debug(props)
             if self.JSON_KEY_VISIBLE in props:
                     props[self.JSON_KEY_VISIBLE] = make_visible
                     if not props[self.JSON_KEY_VISIBLE]:
-                        print "skipping invisible element"
+                        logger.debug("skipping invisible element")
                         return None
 
             if self.JSON_KEY_TYPE in props and props[self.JSON_KEY_TYPE]:
-                self.props[element] = self.driver.find_elements_by_css_selector\
+                self.s2l.wait_until_element_is_visible("xpath=" + self.span[element][self.JSON_KEY_PROPS][self.JSON_KEY_LOC], 30)
+                self.props[element] = self.driver.find_elements_by_xpath\
                     (self.span[element][self.JSON_KEY_PROPS][self.JSON_KEY_LOC])
+                if not self.props[element]:
+                    raise AssertionError("failed to find elements with locator " + self.span[element][self.JSON_KEY_PROPS][self.JSON_KEY_LOC])
             else:
-                print self.span[element][self.JSON_KEY_PROPS][self.JSON_KEY_LOC]
+                logger.debug(self.span[element][self.JSON_KEY_PROPS][self.JSON_KEY_LOC])
                 self.props[element] = self._get_locator_by_type(self.span[element][self.JSON_KEY_PROPS][self.JSON_KEY_LOC])
                 return self.props[element]
 
 
     def _get_locator_by_type(self, locator):
-
-        print "locator %s " % locator
+        logger.debug("locator %s " % locator)
         locator_type, uniqueid = locator[0:1], locator[1:]
-        print "locator_type %s, uniqueid %s" % (locator_type, uniqueid)
-        print "waiting 30 s for element"
-        self.s2l.wait_until_element_is_visible("css=" + locator_type + uniqueid, 30)
+        logger.debug("locator_type %s, uniqueid %s" % (locator_type, uniqueid))
+        logger.debug("waiting 30 s for element")
         if 1 == len(locator_type) and 0 < len(uniqueid):
-            if '#' == locator_type:
+            if '#' == locator_type and ' ' not in uniqueid:
                 elem = self.driver.find_element_by_id(uniqueid)
+            elif '#' == locator_type and ' ' in uniqueid:
+                self.s2l.wait_until_element_is_visible("css=" + locator_type + uniqueid, 30)
+                elem = self.driver.find_element_by_css_selector(locator_type+uniqueid)
             elif '.' == locator_type and ' ' not in uniqueid:
                 elem = self.driver.find_element_by_class_name(uniqueid)
             elif '.' == locator_type and ' ' in uniqueid:
-                elem = self.driver.find_element_by_css_selector(locator_type+uniqueid)
-            elif ' ' in uniqueid:
+                self.s2l.wait_until_element_is_visible("css=" + locator_type + uniqueid, 30)
                 elem = self.driver.find_element_by_css_selector(locator_type+uniqueid)
             elif '/' == locator_type:
+                self.s2l.wait_until_element_is_visible("xpath=" + locator_type + uniqueid, 30)
                 elem = self.driver.find_element_by_xpath(locator_type+uniqueid)
+            elif ' ' in uniqueid:
+                self.s2l.wait_until_element_is_visible("css=" + locator_type + uniqueid, 30)
+                elem = self.driver.find_element_by_css_selector(locator_type+uniqueid)
             else:
-                print "unsupported location finder method"
+                logger.debug("unsupported location finder method")
                 elem = None
 
         if elem:
             highlight(elem)
-            print elem.__dict__
+            logger.debug(elem.__dict__)
         return elem
 
 
